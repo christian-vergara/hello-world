@@ -1,0 +1,69 @@
+package p3;
+import p1.Address;
+
+
+public class Faculty {
+
+	private String name;
+	private int id;
+	private double salary;
+	private Address address;
+	
+	public Faculty() {
+		
+	}
+
+	public Faculty(String name, int id, double salary, Address address) {
+		super();
+		this.name = name;
+		this.id = id;
+		this.salary = salary;
+		this.address = address;
+	}
+
+	public Faculty(Faculty f) {
+		this.name = f.getName();
+		this.id = f.getId();
+		this.salary = f.getSalary();
+		this.address = f.getAddress();
+	}
+	
+	public static double Raise(Faculty f, double raise) {
+		return f.getSalary() + raise;	
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
+	
+	
+}
