@@ -1,0 +1,22 @@
+package p1;
+
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Address a1 = new Address("265", "11792", "New York", "Wading River");
+		Address a2 = new Address(a1);
+		
+		System.out.println(a1);
+		System.out.println(a2);
+		
+		a1.setCity("Houston");
+		System.out.println(a1);
+		System.out.println(a2);
+		
+		
+	}
+
+}
