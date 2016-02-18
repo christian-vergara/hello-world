@@ -1,0 +1,77 @@
+package p5;
+
+import p2.Student;
+import p3.Faculty;
+import p4.Textbook;
+
+public class Course {
+
+	private String courseTitle, crn;
+	private Student student;
+	private Textbook textbook;
+	private Faculty faculty;
+	
+	public Course(){
+		
+	}
+
+	public Course(String courseTitle, String crn, Student student,
+			Textbook textbook, Faculty faculty) {
+		super();
+		this.courseTitle = courseTitle;
+		this.crn = crn;
+		this.student = student;
+		this.textbook = textbook;
+		this.faculty = faculty;
+	}
+	
+	public Course(Course c){
+		this.courseTitle = c.getCourseTitle();
+		this.crn = c.getCrn();
+		this.student = c.getStudent();
+		this.textbook = c.getTextbook();
+		this.faculty = c.getFaculty();
+	}
+
+	public String getCourseTitle() {
+		return courseTitle;
+	}
+
+	public void setCourseTitle(String courseTitle) {
+		this.courseTitle = courseTitle;
+	}
+
+	public String getCrn() {
+		return crn;
+	}
+
+	public void setCrn(String crn) {
+		this.crn = crn;
+	}
+
+	public Student getStudent() {
+		return student;
+	}
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+	public Textbook getTextbook() {
+		return textbook;
+	}
+
+	public void setTextbook(Textbook textbook) {
+		this.textbook = textbook;
+	}
+
+	public Faculty getFaculty() {
+		return faculty;
+	}
+
+	public void setFaculty(Faculty faculty) {
+		this.faculty = faculty;
+	}
+	
+	
+}
