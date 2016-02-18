@@ -1,0 +1,53 @@
+package p4;
+
+public class Textbook {
+
+	private String title, author, isbn;
+	private double price;
+	
+	public Textbook(){
+		
+	}
+	
+	public Textbook(String title, String author, String isbn, double price) {
+		super();
+		this.title = title;
+		this.author = author;
+		this.isbn = isbn;
+		this.price = price;
+	}
+	
+	public Textbook(Textbook t){
+		this.title = t.getTitle();
+		this.author = t.getAuthor();
+		this.isbn = t.getIsbn();
+		this.price = t.getPrice();
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public String getIsbn() {
+		return isbn;
+	}
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+	
+}
