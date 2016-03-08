@@ -1,0 +1,41 @@
+package p1;
+
+public class FuelGauge {
+
+	private final int MAX_GALLONS = 15;
+	
+	private int gallons;
+	
+	public FuelGauge(){
+		gallons = 0;
+	}
+	
+	public FuelGauge(int fuel){
+		if(fuel <= MAX_GALLONS){
+			gallons = fuel;
+		} else {
+			gallons = MAX_GALLONS;
+		}
+	}
+	
+	public int getGallons(){
+		return gallons;
+	}
+	
+	public void incrementGallons(int amount){
+		if(gallons < MAX_GALLONS){
+			gallons += amount;
+		} else {
+			System.out.println("Tank is full!");
+		}
+	}
+	
+	public void decrementGallons(int amount){
+		if(gallons > 0){
+			gallons -= amount;
+		} else {
+			System.out.println("Out of fuel!");
+		}
+	}
+	
+}
