@@ -1,0 +1,24 @@
+package p1;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		FuelGauge f = new FuelGauge();
+		Odometer o  = new Odometer(20000, f);
+		
+		System.out.println("Odometer: " + o.getMileage() + " miles");
+		
+		f.incrementGallons(8);
+		System.out.println("Fuel before drive: " + f.getGallons() + " gallons");
+		
+		o.incrementMileage(120);
+		System.out.println("Odometer: " + o.getMileage() + " miles");
+		
+		o.decrementFuel();
+		System.out.println("Fuel after drive: " + f.getGallons() + " gallons");
+		
+	}
+
+}
