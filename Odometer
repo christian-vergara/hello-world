@@ -1,0 +1,42 @@
+package p1;
+
+public class Odometer {
+
+	public final int MAX_MILEAGE = 999999;
+	public final int MPG = 24;
+	
+	private int mileage;
+	private int count = 0;
+	private FuelGauge fuelGauge;
+	
+	public Odometer(){
+		
+	}
+	
+	public Odometer(int m, FuelGauge fg){
+		 mileage = m;
+		 fuelGauge = fg;
+	}
+	
+	public int getMileage(){
+		return mileage;
+	}
+	
+	public void incrementMileage(int miles){
+		if(mileage < MAX_MILEAGE){
+			mileage += miles;
+			count += miles;
+		} else {
+			mileage = 0;
+		}
+	}
+	
+	public void decrementFuel(){
+			fuelGauge.decrementGallons(count / 24);
+	}
+
+	public void setMileage(int mileage) {
+		this.mileage = mileage;
+	}
+	
+}
